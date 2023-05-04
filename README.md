@@ -51,14 +51,14 @@ $celery worker -A newsdigest --loglevel=INFO -Q news,dashboard,default
     ```
 
 3. Install the project dependencies
-    a. Install redis on the system
-    b. Install Elastic Search 
-    c. Install Postgres database
-    d. Install Pgadmin
-    e. Need to create a 'tnd-production-4306c-1e4c2964822b.json' file on the project root directory.
-    f. Need to create a .env file in the project root directory.
-    g. Need to create a apple.key file in the project root directory.
-    h. Need to run the migrations
+    * Install redis on the system
+    * Install Elastic Search 
+    * Install Postgres database
+    * Install Pgadmin
+    * Need to create a 'tnd-production-4306c-1e4c2964822b.json' file on the project root directory.
+    * Need to create a .env file in the project root directory.
+    * Need to create a apple.key file in the project root directory.
+    * Need to run the migrations
         ```
         python3 manage.py migrate_schemas
         ```
@@ -67,7 +67,7 @@ $celery worker -A newsdigest --loglevel=INFO -Q news,dashboard,default
         python3 manage.py migrate_schemas "app_name" --schema='schemas_name'
         ```
      Note: If still you are facing issues then you need to run migrate files
-    i. Need to run the fixtures
+    * Need to run the fixtures
         ```
         python3 manage.py loaddata client_data
         ```
@@ -87,19 +87,19 @@ $celery worker -A newsdigest --loglevel=INFO -Q news,dashboard,default
     ```
 
 4. Create a new file .env in the root directory, and set the environment variables
-    • SECRET_KEY=key
-    • DEBUG=set_value(True/False)
-    • ALLOWED_HOSTS=localhost,127.0.0.1
-    • DATABASE_NAME=database_name
-    • DATABASE_USER=database_owner
-    • DATABASE_PASSWORD=database_password
-    • DATABASE_HOST=database_host
-    • DATABASE_PORT=database_port
-    • SENTRY_DSN='url'
-    • SENTRY_ENV='product/local'
-    • SENTRY_TRACES_SAMPLE_RATE='0.5'
-    • SENTRY_DSN='url'
-    • REFER_CODE_LINK='url'
-    • CORS_ORIGIN_WHITELIST='allow_host_url'
-    • CORS_ALLOW_HEADERS='allow_host_headers'
-    • CATEGORY_MINIMUM='3'
+    * SECRET_KEY=key
+    * DEBUG=set_value(True/False)
+    * ALLOWED_HOSTS=localhost,127.0.0.1
+    * DATABASE_NAME=database_name
+    * DATABASE_USER=database_owner
+    * DATABASE_PASSWORD=database_password
+    * DATABASE_HOST=database_host
+    * DATABASE_PORT=database_port
+    * SENTRY_DSN='url'
+    * SENTRY_ENV='product/local'
+    * SENTRY_TRACES_SAMPLE_RATE='0.5'
+    * SENTRY_DSN='url'
+    * REFER_CODE_LINK='url'
+    * CORS_ORIGIN_WHITELIST='allow_host_url'
+    * CORS_ALLOW_HEADERS='allow_host_headers'
+    * CATEGORY_MINIMUM='3'
