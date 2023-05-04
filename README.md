@@ -73,15 +73,15 @@ $celery worker -A newsdigest --loglevel=INFO -Q news,dashboard,default
         ```
      Note: Before run this commands redis and elasicsearch must be run the background.
      If you still not able to load fixtures then you need to comments some lines:
-        1. go to the file_name: 'flavour/signals.py'
-        2. then comments three lines:
-            cache.set('short_link_host', instance.short_link_host)
-            cache.set('frontend_host', instance.frontend_host)
-            cache.set('static_host', instance.static_host)
-        3. then try to run again fixtures commands:
-            ```
-            python3 manage.py loaddata client_data
-            ```
+    * go to the file_name: 'flavour/signals.py'
+    * then comments three lines:
+        cache.set('short_link_host', instance.short_link_host)
+        cache.set('frontend_host', instance.frontend_host)
+        cache.set('static_host', instance.static_host)
+    * then try to run again fixtures commands:
+        ```
+        python3 manage.py loaddata client_data
+        ```
     ```
     pip install -r requirements.txt
     ```
